@@ -14,7 +14,7 @@ from image_recognition_openAI import (
     update_credential
 )
 
-st.title("NEST")
+st.title("NEST 🪺")
 st.header("Safe Haven for Your Credentials")
 
 ## upload section
@@ -36,6 +36,18 @@ if uploaded_file is not None:
                 st.success("Credentials extracted and uploaded successfully!")
             except Exception as e:
                 st.error(f"An error occurred: {e}")
+
+
+## TODO: Use the password suggestion function and have a dedicated section for it
+'''
+workflow:
+- Upon searching up passwords, call the password suggestion function
+- If it is weak, suggest a stronger password
+- Have a UI button to accept the suggestion
+- Update the password in the database using update_credential function (optional)
+- Display suggestions using st.alert or st.warning (optional)
+'''
+
 
 ## Search Credentials Section
 st.sidebar.subheader("2. Search Credentials")
