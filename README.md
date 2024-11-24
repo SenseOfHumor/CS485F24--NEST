@@ -3,8 +3,6 @@
 
 [![Streamlit](https://global.discourse-cdn.com/streamlit/original/3X/3/c/3ccec8dae6656656087fdb9dfd5e30578050bf07.svg)](https://streamlit.io/)
 
-[![Build Status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=CS485F24--NEST)](hhttps://github.com/SenseOfHumor/CS485F24--NEST)
-
 Hey there 👋!
 The main objective for our project was to create a program that aimed to convert
 handwritten passwords into digital passwords in order to increase usability and convenience for
