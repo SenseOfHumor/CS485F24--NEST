@@ -39,14 +39,14 @@ if uploaded_file is not None:
 
 
 ## TODO: Use the password suggestion function and have a dedicated section for it
-'''
-workflow:
-- Upon searching up passwords, call the password suggestion function
-- If it is weak, suggest a stronger password
-- Have a UI button to accept the suggestion
-- Update the password in the database using update_credential function (optional)
-- Display suggestions using st.alert or st.warning (optional)
-'''
+# 
+# workflow:
+# - Upon searching up passwords, call the password suggestion function
+# - If it is weak, suggest a stronger password
+# - Have a UI button to accept the suggestion
+# - Update the password in the database using update_credential function (optional)
+# - Display suggestions using st.alert or st.warning (optional)
+# 
 
 
 ## Search Credentials Section

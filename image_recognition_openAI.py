@@ -136,16 +136,15 @@ def update_credential(platform, username, new_password):
 ## TODO: Add option to use camera to take a picture and upload it
 
 ## TODO: Add function to suggest a strong password using OpenAI API
-''' 
-WorkFlow:
-- when retrieving the credentials, check if the password is weak
-- add a score between 0 - 9 to the password
-- if below 5 (weak password), suggest a strong password
-- if above 5 (strong password), do nothing
-- if weak, suggest a strong password
-- update the password in the database upon users request (optional)
-- use alert to notify the user of the weak password and suggest a strong password
-'''
+# WorkFlow:
+# - when retrieving the credentials, check if the password is weak
+# - add a score between 0 - 9 to the password
+# - if below 5 (weak password), suggest a strong password
+# - if above 5 (strong password), do nothing
+# - if weak, suggest a strong password
+# - update the password in the database upon users request (optional)
+# - use alert to notify the user of the weak password and suggest a strong password
+
 
 
 
