@@ -47,7 +47,7 @@ And of course NEST itself is open source with a public repo on GitHub 💯
 
 ## Installation 💿
 
-NEST requires you to install streanmlit (a python library) and a few other requirements to run.
+NEST requires you to install streamlit (a python library) and a few other requirements to run.
 
 Install the requirements.txt file to get started
 ```sh
@@ -60,6 +60,9 @@ OAPI = "YOUR-OPENAI-API-KEY"
 MONGO_URI="YOUR-MONGO-URI" (Without quotes)
 ```
 >NOTE: Mongo may block unrecognized IPs from connecting, make sure to whitelist your IP before running
+
+To run the project, from the terminal within vs code, type
+`streamlit run app.py`
 
 
 
