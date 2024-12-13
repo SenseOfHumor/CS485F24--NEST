@@ -32,10 +32,10 @@ st.markdown("""
 
 
 st.title("NEST 🪺")
-st.header("Safe Haven for Your Credentials")
+st.header("Safe Haven for Your Passwords")
 
 ## upload section
-st.markdown("## Upload Image and Extract Credentials")
+st.markdown("## Upload Image and Extract Usernames, Passwords")
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
@@ -46,11 +46,11 @@ if uploaded_file is not None:
 
     st.image(uploaded_file, caption="Uploaded Image", use_column_width=True)
 
-    if st.button("Extract and Upload Credentials"):
-        with st.spinner("Extracting credentials and uploading to MongoDB..."):
+    if st.button("Extract and Upload Usernames, Passwords"):
+        with st.spinner("Extracting usernames, passwords and uploading to MongoDB..."):
             try:
                 upload_to_mongo(temp_image_path)
-                st.success("Credentials extracted and uploaded successfully!")
+                st.success("usernames, passwords extracted and uploaded successfully!")
             except Exception as e:
                 st.error(f"An error occurred: {e}")
 
@@ -67,7 +67,7 @@ if uploaded_file is not None:
 
 
 ## Search Credentials Section
-st.sidebar.markdown("### Search Credentials")
+st.sidebar.markdown("### Search Username, Password")
 search_query = st.sidebar.text_input("Enter platform or username to search:")
 if st.sidebar.button("Search"):
     # with st.sidebar.spinner("Searching for credentials..."):
@@ -89,7 +89,7 @@ if st.sidebar.button("Search"):
             st.sidebar.error(f"An error occurred: {e}")
 
 ## Update Credential Section
-st.sidebar.markdown("### Update Credential")
+st.sidebar.markdown("### Update Username, Password")
 platform_to_update = st.sidebar.text_input("Enter the platform to update:")
 username_to_update = st.sidebar.text_input("Enter the username to update:")
 new_password = st.sidebar.text_input("Enter the new password:", type="password")
@@ -103,7 +103,7 @@ if st.sidebar.button("Update Password"):
                 )
             else:
                 st.sidebar.warning(
-                    f"No credentials found for username {username_to_update} on platform {platform_to_update}."
+                    f"No Username/Passwords found for username {username_to_update} on platform {platform_to_update}."
                 )
         except Exception as e:
             st.sidebar.error(f"An error occurred: {e}")
