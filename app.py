@@ -14,11 +14,28 @@ from image_recognition_openAI import (
     update_credential
 )
 
+
+## Custom CSS to make buttons and font larger
+## Changes made after feedback from test subjects
+## Only makes the button size larger, due to streamlit's limitations
+st.markdown("""
+    <style>
+    .stButton button {
+        font-size: 30px;
+        padding: 15px 25px;
+    }
+    .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown p {
+        font-size: 30px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+
 st.title("NEST 🪺")
 st.header("Safe Haven for Your Credentials")
 
 ## upload section
-st.subheader("1. Upload Image and Extract Credentials")
+st.markdown("## Upload Image and Extract Credentials")
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
@@ -50,7 +67,7 @@ if uploaded_file is not None:
 
 
 ## Search Credentials Section
-st.sidebar.subheader("2. Search Credentials")
+st.sidebar.markdown("### Search Credentials")
 search_query = st.sidebar.text_input("Enter platform or username to search:")
 if st.sidebar.button("Search"):
     # with st.sidebar.spinner("Searching for credentials..."):
@@ -72,7 +89,7 @@ if st.sidebar.button("Search"):
             st.sidebar.error(f"An error occurred: {e}")
 
 ## Update Credential Section
-st.sidebar.subheader("3. Update Credential")
+st.sidebar.markdown("### Update Credential")
 platform_to_update = st.sidebar.text_input("Enter the platform to update:")
 username_to_update = st.sidebar.text_input("Enter the username to update:")
 new_password = st.sidebar.text_input("Enter the new password:", type="password")
